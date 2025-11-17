@@ -1,313 +1,833 @@
-<div>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-<script src="https://kit.fontawesome.com/26bd0543e2.js" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate stylish text and fancy fonts online for free. Create cool text with unique symbols, decorative borders, and special characters for social media, gaming, and more.">
+    <meta name="keywords" content="stylish text generator, fancy fonts, cool text, text symbols, decorative text, gaming names, social media fonts, unicode text, special characters">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="1StylishName.com">
+    <meta property="og:title" content="Stylish Text Generator - Create Cool Fancy Fonts Online | 1StylishName">
+    <meta property="og:description" content="Transform your text into stylish fonts with our free online generator. Create unique names and text with cool symbols and decorative styles.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://1stylishname.com">
+    <meta property="og:image" content="https://1stylishname.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stylish Text Generator - Create Cool Fancy Fonts">
+    <meta name="twitter:description" content="Generate stylish text and fancy fonts for free. Perfect for gaming names, social media, and unique text styling.">
+    
+    <title>Stylish Text Generator - Create Cool Fancy Fonts Online | 1StylishName</title>
+    
+    <link rel="canonical" href="https://1stylishname.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Stylish Text Generator",
+        "description": "Free online tool to generate stylish text and fancy fonts with symbols and decorative elements",
+        "url": "https://1stylishname.com",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Generate stylish text",
+            "Create fancy fonts",
+            "Add decorative borders",
+            "Copy text instantly",
+            "Multiple font styles"
+        ]
+    }
+    </script>
+    
 <style>
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #f0f0f0;
+}
+
+/* Main Content */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Tool Section */
+.tool-section {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
 .btn {
-  width: 90px;
+    width: auto;
+    min-width: 90px;
 }
+
 .body-box {
- margin: 0px;
- padding: 0px;
- scroll-behavior: smooth;
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
 }
+
 .down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transition: transform 0.5s;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transition: transform 0.5s;
 }
-.arrow{
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  padding: 3px;
-  overflow: hidden;
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    overflow: hidden;
 }
+
 .up {
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-  transition: transform 0.5s;
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transition: transform 0.5s;
 }
+
 .dropdown .dropdown-menu {
-  display: none;
+    display: none;
 }
+
 .dropdown .show {
     display: block;
     max-height: 9999px;
 }
+
 .bg-dark {
-  background-color: #1E2235;
+    background-color: #1E2235;
 }
+
 .bg-black {
-  background-color: black;
+    background-color: black;
 }
+
 .bg-grey {
-  background-color:#f2f2f2
+    background-color: #f2f2f2;
 }
+
 .bg-w {
-  background-color: #fff;
+    background-color: #fff;
 }
+
 .btn-round:active {
-  font-size: 0.95rem;
+    font-size: 0.95rem;
 }
+
 .bg-2 {
-  background-color:#0039e6/*#0099ff*/;
+    background-color: #0039e6;
 }
+
 .bg-1 {
-  background-color: #002db3  ;
+    background-color: #002db3;
 }
+
 .card-body {
-  overflow: hidden;
-  margin: 10px;
+    overflow: hidden;
+    margin: 10px;
 }
+
 .card {
-font-family: 'Noto Sans', sans-serif;
-  background-color: #002db3;
-  padding: 5px 10px 10px 10px;
-  margin:0px;
-  color: #ffffff;
- /* font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Poppins', sans-serif;
+    background-color: #002db3;
+    padding: 5px 10px 10px 10px;
+    margin: 0px;
+    color: #ffffff;
 }
-/* search box css start */
+
+/* Search Box */
 .title {
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Tangerine', serif;
-  font-size: 3rem;
-  font-weight: bold;
-  text-shadow:inset 4px 4px 4px #aaa;
-  background: #FF0000;
-background: #000;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
 }
+
 .b-line {
-  border-bottom: 2px solid white;
-  padding: 0px 10px 3px 1px;
+    border-bottom: 2px solid white;
+    padding: 0px 10px 3px 1px;
 }
-.row-box{
-  display: flex;
-  flex-direction:row;
-  max-width: 700px;
-  border-radius: 8px;
-  overflow: hidden;
+
+.row-box {
+    display: flex;
+    flex-direction: row;
+    max-width: 700px;
+    border-radius: 8px;
+    overflow: hidden;
 }
+
 input[type=text] {
--webkit-appearance: none;
--moz-appearance: none;
-border-radius: 0px;
-border:none;
-color: #495057;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0px;
+    border: none;
+    color: #495057;
 }
+
 .of-hide {
-  overflow:hidden;
+    overflow: hidden;
 }
+
 .pnr-input {
-  border:none;
-  color: #495057;
-  font-size: 1rem;
-  flex-grow: 2;
-  margin: auto;
-  box-sizing: border-box;
-  padding: 1rem 1.2rem;
-  overflow: auto;
-  /*font-family: 'Montserrat', sans-serif;*/
-  width: 100%;
+    border: none;
+    color: #495057;
+    font-size: 1rem;
+    flex-grow: 2;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 1rem 1.2rem;
+    overflow: auto;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
 }
+
 .pnr-input:focus {
-  outline: none;
+    outline: none;
 }
+
 .pnr-input::placeholder {
-  font-size:14px;
-  letter-spacing:1px;
-  font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 400;
 }
+
 .btn {
-  color: white ;
-  border:none;
-  padding: .5rem .5rem;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 12px;
-  box-sizing: content-box;
+    color: white;
+    border: none;
+    padding: .5rem .5rem;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+    box-sizing: content-box;
 }
-/*box design css*/
+
+/* Box Design */
 .shadow-in {
-  box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
 }
+
 .box-shadow {
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
 }
+
 .border {
-  border:1px solid #d3d3d3;
+    border: 1px solid #d3d3d3;
 }
+
 .b-bottom {
-  border-bottom:1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
 }
+
 .b-radius {
-  border-radius: 8px;
+    border-radius: 8px;
 }
+
 .b-radius-n {
-  border-radius:0px;
+    border-radius: 0px;
 }
+
 .avatar {
-  background-color: #e3e3e3;
-  padding: 5px;
-  border-radius: 50%;
-  overflow: hidden;
-  width:55px;
-  height: 55px;
-  border: 3px solid white ;
+    background-color: #e3e3e3;
+    padding: 5px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 55px;
+    height: 55px;
+    border: 3px solid white;
 }
+
 .b-circle {
-  border-radius:50%;
-  padding:10px;
-  height: auto;
+    border-radius: 50%;
+    padding: 10px;
+    height: auto;
 }
+
 .circle {
-  border-radius: 52%;
-  overflow: hidden;
-  width:75px;
-  height: 75px;
-  border: 3px solid white;
+    border-radius: 52%;
+    overflow: hidden;
+    width: 75px;
+    height: 75px;
+    border: 3px solid white;
 }
+
 .flex-w {
-  flex: 0 0 auto;
+    flex: 0 0 auto;
 }
+
 .flex {
-  display:flex;
-  justify-content: space-between;
-  flex-direction: row;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
 }
+
 .flex-col {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 .flex-row {
-  display:flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
 }
+
 .max-w600 {
-  max-width:600px;
+    max-width: 600px;
 }
+
 .w-100 {
-  width: 100%;
+    width: 100%;
 }
+
 .padding {
-  padding: 10px;
+    padding: 10px;
 }
+
 .margin {
-  margin:10px ;
+    margin: 10px;
 }
+
 .m-tb {
-  margin: 10px 0px;
+    margin: 10px 0px;
 }
+
 .p-lr {
-  padding: 0px 10px;
+    padding: 0px 10px;
 }
+
 .p-tb {
-  padding: 10px 0px;
+    padding: 10px 0px;
 }
+
 .p-top {
-  padding-top:10px;
+    padding-top: 10px;
 }
+
 .m-top {
-  margin-top:5px;
+    margin-top: 5px;
 }
+
 .m-bottom {
-  margin-bottom:5px;
+    margin-bottom: 5px;
 }
+
 .m-r {
-  margin-right: 5px;
+    margin-right: 5px;
 }
+
 .text {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: black;
 }
+
 .small {
-  font-size: 12px;
+    font-size: 12px;
 }
+
 .xsmall {
-  font-size:10px;
+    font-size: 10px;
 }
+
 .mid {
-  font-size: 14px;
+    font-size: 14px;
 }
+
 .xmid {
-  font-size: 18px;
+    font-size: 18px;
 }
+
 .large {
-  font-size:24px
+    font-size: 24px;
 }
-.bold{
-  font-weight:600;
+
+.bold {
+    font-weight: 600;
 }
+
 .grey {
-  color: #495057;
+    color: #495057;
 }
+
 .white {
-  color: white;
+    color: white;
 }
+
 .w-off {
-  color: rgb(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.7);
 }
+
 .black {
-  color:  #333333;
+    color: #333333;
 }
+
 .green {
-  color:#39ac39;
+    color: #39ac39;
 }
+
 .yellow {
-  color: orange;
+    color: orange;
 }
+
 .class {
-  font-size: 14px;
-  opacity: 50%;
+    font-size: 14px;
+    opacity: 50%;
 }
+
 .off-color {
-  color: #999999;
+    color: #999999;
 }
+
 .center {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
-.reveal{
-  transform: translatey(20px);
-  opacity: 0;
-  transition: 0.4s all ease;
-}
-.reveal.active {
-  transform: translatey(0);
-  opacity: 1;
-}
-.open-ani {
-       animation: rotateX 0.5s ease-in-out forwards
-}
-@keyframes rotateX {
-  from {
+
+.reveal {
+    transform: translateY(20px);
     opacity: 0;
-    transform: translatey(20px);
-  }
-  to {
+    transition: 0.4s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
     opacity: 1;
-    transform: translatey(0);
-  }
+}
+
+.open-ani {
+    animation: rotateX 0.5s ease-in-out forwards;
+}
+
+@keyframes rotateX {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Feature Section */
+.features-section {
+    margin: 4rem 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.feature-description {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* How to Use Section */
+.how-to-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 2rem;
+    border-radius: 20px;
+    margin: 4rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.step-card {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.step-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.3);
+    margin-bottom: 1rem;
+}
+
+.step-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.step-description {
+    color: rgba(255,255,255,0.9);
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    padding: 3rem 0 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    color: #ecf0f1;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #34495e;
+    color: #95a5a6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .tool-section {
+        padding: 1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Copy button styles */
+.copy-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>') no-repeat center;
+}
+
+.check-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2339ac39"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>') no-repeat center;
 }
 
 </style>
-</div>
-<div>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="/" class="logo">1StylishName</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#how-to-use" class="nav-link">How to Use</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="body-box">
-<h2 class=" title center p-tb ">Stylish Name Generator </h2>
-<div class="flex-col   center b-bottom">
-<div class=" flex-col w-100 center max-w600  b-radius-n " ><div class="border of-hide b-radius w-100 "><input type="text" id="input" class="pnr-input w-100  shadow-in xmid  "  required="required" name="text" placeholder="╰☆☆ Enter normal text here :) "></input></div><button onclick="getVal()" class="margin btn-round">Generate Names</button> <br> </div> </div>
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <h1 class="hero-title">Stylish Text Generator</h1>
+            <p class="hero-subtitle">Transform your ordinary text into extraordinary stylish fonts with decorative symbols, borders, and unique characters. Perfect for gaming names, social media posts, and creative content.</p>
+        </section>
 
-<div id="dem" class="center  flex-col"></div>
+        <!-- Tool Section -->
+        <section class="tool-section">
+            <div class="body-box">
+                <h2 class="title center p-tb">Create Your Stylish Name</h2>
+                <div class="flex-col center b-bottom">
+                    <div class="flex-col w-100 center max-w600 b-radius-n">
+                        <div class="border of-hide b-radius w-100">
+                            <input type="text" id="input" class="pnr-input w-100 shadow-in xmid" required="required" name="text" placeholder="╰☆☆ Enter your text here :) ☆☆╮">
+                        </div>
+                        <button onclick="getVal()" class="margin btn-round" style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; border: none; padding: 12px 24px; border-radius: 25px; font-weight: 600; cursor: pointer; transition: transform 0.2s;">Generate Stylish Names</button>
+                    </div>
+                </div>
+                <div id="dem" class="center flex-col"></div>
+            </div>
+        </section>
 
-</div>
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <h2 class="section-title">Why Choose Our Stylish Text Generator?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Multiple Font Styles</h3>
+                    <p class="feature-description">Choose from dozens of unique font styles including cursive, bold, italic, and special character fonts to make your text stand out.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Instant Generation</h3>
+                    <p class="feature-description">Generate stylish text instantly with just one click. No waiting, no loading - your stylish text is ready immediately.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3 class="feature-title">Easy Copy & Paste</h3>
+                    <p class="feature-description">Copy your favorite stylish text with a single click and paste it anywhere - social media, games, messages, or websites.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3 class="feature-title">Universal Compatibility</h3>
+                    <p class="feature-description">Works across all platforms - Instagram, Facebook, Twitter, Discord, gaming platforms, and any text input field.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🆓</div>
+                    <h3 class="feature-title">100% Free</h3>
+                    <p class="feature-description">Completely free to use with no registration required. Generate unlimited stylish text without any restrictions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3 class="feature-title">Mobile Friendly</h3>
+                    <p class="feature-description">Optimized for all devices - desktop, tablet, and mobile. Create stylish text on the go from any device.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Use Section -->
+        <section id="how-to-use" class="how-to-section">
+            <h2 class="section-title">How to Create Stylish Text in 3 Easy Steps</h2>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Type Your Text</h3>
+                    <p class="step-description">Enter any text you want to transform in the input box above. It can be your name, a message, or any words you want to stylize.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Generate Styles</h3>
+                    <p class="step-description">Click the "Generate Stylish Names" button and watch as our tool creates dozens of unique stylish variations of your text.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Copy & Use</h3>
+                    <p class="step-description">Browse through the generated styles, find your favorite, and click "Copy" to use it anywhere you want - social media, games, or messages.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section" style="background: white; padding: 3rem 2rem; border-radius: 15px; margin: 3rem 0;">
+            <h2 class="section-title" style="color: #333;">About Stylish Text Generator</h2>
+            <div style="max-width: 800px; margin: 0 auto; line-height: 1.8; color: #666;">
+                <p>Our Stylish Text Generator is the ultimate tool for creating eye-catching, unique text styles that will make your content stand out. Whether you're looking to create a cool gaming username, make your social media posts more engaging, or add flair to your messages, our generator provides endless possibilities.</p>
+                
+                <p>With support for Unicode characters, special symbols, and decorative borders, you can transform any ordinary text into something extraordinary. Our tool uses advanced algorithms to apply various text transformations, including different font styles, character mappings, and decorative elements.</p>
+                
+                <p>Perfect for gamers, social media enthusiasts, content creators, and anyone who wants to express themselves with unique typography. All generated text is compatible with major platforms including Instagram, Facebook, Twitter, Discord, and most gaming platforms.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>1StylishName</h3>
+                <p>The best free online tool for generating stylish text and fancy fonts. Transform your ordinary text into extraordinary designs with our easy-to-use generator.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-to-use">How to Use</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Popular Uses</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Gaming Usernames</a></li>
+                    <li><a href="#">Social Media Posts</a></li>
+                    <li><a href="#">Profile Names</a></li>
+                    <li><a href="#">Creative Content</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Text Styles</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Fancy Fonts</a></li>
+                    <li><a href="#">Cursive Text</a></li>
+                    <li><a href="#">Bold Styles</a></li>
+                    <li><a href="#">Symbol Text</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 1StylishName.com - All rights reserved. Create amazing stylish text for free!</p>
+        </div>
+    </footer>
+
 <script>
 
    function dottyJoiner(text) {
@@ -423,16 +943,16 @@ function applyCharMap(map, text) {
   let  x = "";
 
   for(let i in futureAlienCharMap) { 
-x =x+ '<div  class="dropdown m-tb  max-w600 w-100"><div id="copy" class=" open-ani row-box box-shadow bg-w" ><div data-toggle="dropdown" class="w-100 flex"><input id="text" type="text" class="pnr-input  " value="'+applyCharMap(futureAlienCharMap[i], val)+'" readonly="readonly"/><i class="arrow down margin"></i></div><button id="btn" class="btn flex-row b-radius-n mid bg-dark" > <i class="fa-regular fa-copy m-r"></i> Copy</button></div><div class="dropdown-menu open-ani m-lr padding">';
+x =x+ '<div  class="dropdown m-tb  max-w600 w-100"><div id="copy" class=" open-ani row-box box-shadow bg-w" ><div data-toggle="dropdown" class="w-100 flex"><input id="text" type="text" class="pnr-input  " value="'+applyCharMap(futureAlienCharMap[i], val)+'" readonly="readonly"/><i class="arrow down margin"></i></div><button id="btn" class="btn flex-row b-radius-n mid bg-dark" ><span class="copy-icon"></span>Copy</button></div><div class="dropdown-menu open-ani m-lr padding">';
 for(let n in flourishArray ) {
-  x =x+ '<div id="copy" class="reveal row-box  m-top box-shadow bg-w"><input id="text" type="text" class=" pnr-input " value="'+wrapInFlourish(n,applyCharMap(futureAlienCharMap[i], val))+'" readonly="readonly"><button id="btn" class="bg-dark  b-radius-n padding btn" > <i class="fa-regular fa-copy m-r"></i> Copy</button></div>';};
+  x =x+ '<div id="copy" class="reveal row-box  m-top box-shadow bg-w"><input id="text" type="text" class=" pnr-input " value="'+wrapInFlourish(n,applyCharMap(futureAlienCharMap[i], val))+'" readonly="readonly"><button id="btn" class="bg-dark  b-radius-n padding btn" ><span class="copy-icon"></span>Copy</button></div>';};
   x =x+ '</div> </div>' ;
   
 } ;
 for(let i in joiner) { 
-x =x+ '<div  class="dropdown  m-tb max-w600 w-100"><div id="copy" class=" row-box box-shadow bg-w " ><div data-toggle="dropdown" class="w-100 flex"><input id="text" type="text" class="pnr-input  " value="'+joiner[i](val)+'" readonly="readonly"/><i class="arrow down margin"></i></div><button id="btn" class="btn flex-row b-radius-n mid bg-dark" > <i class="fa-regular fa-copy m-r"></i> copy</button></div><div class="dropdown-menu  open-ani m-lr padding">';
+x =x+ '<div  class="dropdown  m-tb max-w600 w-100"><div id="copy" class=" row-box box-shadow bg-w " ><div data-toggle="dropdown" class="w-100 flex"><input id="text" type="text" class="pnr-input  " value="'+joiner[i](val)+'" readonly="readonly"/><i class="arrow down margin"></i></div><button id="btn" class="btn flex-row b-radius-n mid bg-dark" ><span class="copy-icon"></span>Copy</button></div><div class="dropdown-menu  open-ani m-lr padding">';
 for(let n in flourishArray ) {
-  x =x+ '<div id="copy" class=" row-box  m-top box-shadow bg-w "><input id="text" type="text" class=" pnr-input " value="'+wrapInFlourish(n,joiner[i](val))+'" readonly="readonly"><button id="btn" class="bg-dark  b-radius-n padding btn" > <i class="fa-regular fa-copy m-r"></i> copy</button></div>';};
+  x =x+ '<div id="copy" class=" row-box  m-top box-shadow bg-w "><input id="text" type="text" class=" pnr-input " value="'+wrapInFlourish(n,joiner[i](val))+'" readonly="readonly"><button id="btn" class="bg-dark  b-radius-n padding btn" ><span class="copy-icon"></span>Copy</button></div>';};
   x =x+ '</div> </div>' ;
 };
 //console.log(x);
@@ -486,8 +1006,8 @@ console.log(text.value);
   navigator.clipboard.writeText(text.value);
   
   // change copy button text to done 
-  btn.innerHTML = '<i class="fa-regular fa-circle-check m-r green"></i>Copied';
-  setTimeout(function(){ btn.innerHTML = '<i class="fa-regular fa-copy m-r"></i> Copy'; }, 2000);
+  btn.innerHTML = '<span class="check-icon"></span>Copied';
+  setTimeout(function(){ btn.innerHTML = '<span class="copy-icon"></span>Copy'; }, 2000);
     };
   })
 /*copy text end */
@@ -513,7 +1033,28 @@ function reveal() {
 
 window.addEventListener("scroll", reveal); 
 
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Performance optimization
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize with default text
+    getVal();
+});
 
 </script>
 
-</div>
+
+</body>
+</html>
